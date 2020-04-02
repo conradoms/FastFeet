@@ -42,16 +42,6 @@ class RecipientsController {
   }
 
   async update(req, res) {
-    const {
-      name: recipientName,
-      street,
-      number,
-      complement,
-      state,
-      city,
-      zip_code,
-    } = req.body;
-
     const { id: recipientId } = req.params;
 
     const schema = Yup.object().shape({
